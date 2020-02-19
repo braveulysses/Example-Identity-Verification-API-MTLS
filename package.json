@@ -1,0 +1,24 @@
+{
+  "name": "example-id-verification-api",
+  "version": "0.1.0",
+  "author": "Jacob Childress",
+  "description": "A fake API for testing",
+  "private": true,
+  "main": "App.js",
+  "scripts": {
+    "build-static": "mkdir -p ./dist/public/css && cp ./public/css/* ./dist/public/css",
+    "build": "yarn run build-static && babel -d ./dist ./src -s",
+    "start": "yarn run build && node ./dist/App.js"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "express": "^4.17.1",
+    "jstransformer-highlight": "^2.0.0",
+    "pug": "^2.0.4"
+  },
+  "engines": {
+    "node": "10.x"
+  }
+}

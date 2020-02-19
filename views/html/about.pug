@@ -1,0 +1,23 @@
+html
+  head
+    title Example Identify Verification API
+    link(rel='stylesheet' href='/static/css/mono-blue.css')
+  body
+    h1 Example Identify Verification API
+    p This is a simple example REST API.
+    p To use, make a GET request to
+      tt  /users/:userid
+      |, where
+      tt  :userid
+      |  is a username like "user.22".
+    p Responses are returned as JSON. For example:
+    pre(style="width: 30%;")
+      code.hljs
+        :highlight(lang="json", style="Mono Blue")
+          {
+              "documentType": "passport",
+              "issuingCountry": "MX",
+              "nationality": "MX",
+              "username": "user.22",
+              "verified": true
+          }
