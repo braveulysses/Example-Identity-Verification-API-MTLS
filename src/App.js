@@ -1,10 +1,12 @@
 import express from 'express';
+import morgan from 'morgan';
 import path from 'path';
 import User from './models/User';
 
 const app = express();
 
 app.set('view engine', 'pug');
+app.use(morgan('dev'));
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
 const _sendDefaultResponse = (response) => {

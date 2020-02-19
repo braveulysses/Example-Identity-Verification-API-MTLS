@@ -16,6 +16,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "express": "^4.17.1",
     "jstransformer-highlight": "^2.0.0",
+    "morgan": "^1.9.1",
     "pug": "^2.0.4"
   },
   "engines": {
