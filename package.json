@@ -17,6 +17,8 @@
     "express": "^4.17.1",
     "jstransformer-highlight": "^2.0.0",
     "morgan": "^1.9.1",
+    "passport": "^0.4.1",
+    "passport-client-cert": "^2.1.0",
     "pug": "^2.0.4"
   },
   "engines": {
