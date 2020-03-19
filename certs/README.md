@@ -13,6 +13,8 @@ you would do:
 $ http --verify=no --cert=01-alice.pem --cert-key=01-alice.key https://localhost:3000/users/user.1
 ```
 
+Two Java keystore (JKS) files are also provided for the "alice" and "carol" certs.
+
 For reference, the certs (including the server cert) were generated based on
 steps at:
 https://gist.github.com/mtigas/952344
