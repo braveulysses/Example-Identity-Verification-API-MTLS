@@ -3,8 +3,22 @@
 This directory includes certs and keys that can be used for testing, including
 the server cert and key.
 
+| File | Description |
+| ---- | ----------- |
+| `.pem` | Public certificate |
+| `.key` | Private key |
+| `.csr` | Certificate signing request (you probably won't need this) |
+| `.p12` | PKCS12 keystore. Password is *password* and the certificate alias is the name of the file without the extension, such as *alice*. | 
+| `.jks` | Java keystore. Password is *password* and the certificate alias is the name of the file without the extension, such as *alice*. | 
+
 The "alice" and "carol" certs are example certs that can be used as client certs.
 They have common name (cn) values of "alice" and "carol", respectively.
+
+For reference, the certs (including the server cert) were generated based on
+steps at:
+https://gist.github.com/mtigas/952344
+
+## Using with an HTTP client
 
 To use one of the client certs with [httpie](https://httpie.org), for example,
 you would do:
@@ -12,9 +26,3 @@ you would do:
 ```bash
 $ http --verify=no --cert=01-alice.pem --cert-key=01-alice.key https://localhost:3000/users/user.1
 ```
-
-Two Java keystore (JKS) files are also provided for the "alice" and "carol" certs.
-
-For reference, the certs (including the server cert) were generated based on
-steps at:
-https://gist.github.com/mtigas/952344
