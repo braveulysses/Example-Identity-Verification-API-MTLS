@@ -18,6 +18,8 @@ For reference, the certs (including the server cert) were generated based on
 steps at:
 https://gist.github.com/mtigas/952344
 
+This directory also includes a JKS trust store for the server cert. 
+
 ## Using with an HTTP client
 
 To use one of the client certs with [httpie](https://httpie.org), for example,
