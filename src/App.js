@@ -3,6 +3,7 @@ import fs from 'fs';
 import https from 'https';
 import morgan from 'morgan';
 import path from 'path';
+import util from 'util';
 import User from './models/User';
 
 // A list of valid user IDs
@@ -36,7 +37,7 @@ const _authenticate = (cert) => {
   const subject = cert.subject;
   let msg = 'Attempting MTLS authentication';
 
-  console.log(msg);
+  console.log(msg + ' - cert: ' + util.inspect(cert, false, null, true));
 
   if (!subject) {
     console.log(msg + ' ✘ - no subject');
